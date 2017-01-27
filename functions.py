@@ -42,6 +42,15 @@ def quick_sort_dict(adict, list_of_keys, left, right, checkpoint):
 def quick_sort_list(alist, left, right, checkpoint):
     """
     This function aims to build a quicksort algorithm for lists.
+
+    TEST pour la fonction quick_sort_dict
+    Renvoie  : alist = ['b', 'c', 'a']
+    a = {'a' : 3, 'b' : 1, 'c' : 2}
+    l = []
+    for key in a:
+        l.append(key)
+
+    alist = quick_sort_dict(a,l,0,len(l)-1,0)
     """
     def partition(alist, le, ri):
         i = ri + 1
@@ -97,4 +106,3 @@ def jaro_winkler(str1, str2, alpha = 0.8):
         and str1[common_prefix] == str2[common_prefix]:
         common_prefix += 1
     return dist*alpha + (1-dist*alpha)*common_prefix/5
-
